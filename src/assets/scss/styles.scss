@@ -4,9 +4,10 @@
 //font
 .landing-page {
   &-content {
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    min-height: -webkit-fill-available;
     text-align: center;
     margin: 0 auto;
     display: grid;
@@ -57,9 +58,11 @@
         }
       }
       & .button-connect-wallet:hover {
-        color: rgba(255, 255, 255, 1);
-        border: 0px solid rgba(28, 28, 28, 0.8);
-        background-color: rgba(28, 28, 28, 1);
+        @media (min-width: 524px) {
+          color: rgba(255, 255, 255, 1);
+          border: 0px solid rgba(28, 28, 28, 0.8);
+          background-color: rgba(28, 28, 28, 1);
+        }
       }
     }
     .footer-site {
@@ -81,7 +84,8 @@
     background-image: url("../img/hpbackground.webp");
     background-size: cover;
     width: 100vw;
-    height: 10vh;
+    height: 100vh;
+    min-height: -webkit-fill-available;
     position: absolute;
     @media (max-width: 524px) {
       background-size: cover;
